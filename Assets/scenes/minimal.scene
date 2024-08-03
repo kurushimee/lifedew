@@ -55,103 +55,80 @@
       ]
     },
     {
-      "__guid": "6ad70641-3c6c-4402-9c85-9a4969af4764",
+      "__guid": "2e82f724-aae9-40ce-8a02-f12ce4286131",
       "Flags": 0,
-      "Name": "Plane",
-      "Scale": "5,5,5",
+      "Name": "Player",
+      "Tags": "player",
       "Enabled": true,
       "Components": [
         {
-          "__type": "Sandbox.ModelRenderer",
-          "__guid": "0b6a18bf-fdb8-4661-970e-ef635bfa9baa",
-          "BodyGroups": 18446744073709551615,
-          "MaterialOverride": "materials/default.vmat",
-          "Model": "models/dev/plane.vmdl",
-          "RenderType": "On",
-          "Tint": "0.39546,0.51163,0.27128,1"
+          "__type": "Sandbox.CharacterController",
+          "__guid": "c8d55884-052f-4bd4-bd12-cfd2bd76634f",
+          "Acceleration": 10,
+          "Bounciness": 0.3,
+          "GroundAngle": 45,
+          "Height": 64,
+          "IgnoreLayers": "player",
+          "Radius": 10,
+          "StepHeight": 18,
+          "UseCollisionRules": false
         },
         {
-          "__type": "Sandbox.BoxCollider",
-          "__guid": "0715cb55-1733-4f5e-8560-c288b8695631",
-          "Center": "0,0,-5",
-          "IsTrigger": false,
-          "Scale": "100,100,10",
-          "Static": false
+          "__type": "PlayerMovement",
+          "__guid": "146005ca-0d33-4809-a22b-5d1a63fe63dd",
+          "AirControl": 0.1,
+          "DuckSpeed": 90,
+          "GroundControl": 5,
+          "MaxAirAccel": 50,
+          "WalkSpeed": 160
+        }
+      ],
+      "Children": [
+        {
+          "__guid": "3ee1c9f4-07be-4e0b-8b23-67bee2d8ec8a",
+          "Flags": 0,
+          "Name": "Camera",
+          "Position": "0,0,64",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "Sandbox.CameraComponent",
+              "__guid": "cf3cbf96-22b6-4be4-a5d0-672a96c17f9f",
+              "BackgroundColor": "0.33333,0.46275,0.52157,1",
+              "ClearFlags": "All",
+              "FieldOfView": 90,
+              "IsMainCamera": true,
+              "Orthographic": false,
+              "OrthographicHeight": 1204,
+              "Priority": 1,
+              "RenderExcludeTags": "",
+              "RenderTags": "",
+              "TargetEye": "None",
+              "Viewport": "0,0,1,1",
+              "ZFar": 10000,
+              "ZNear": 10
+            }
+          ]
         }
       ]
     },
     {
-      "__guid": "3ee1c9f4-07be-4e0b-8b23-67bee2d8ec8a",
+      "__guid": "6f09239a-fe2b-4f2e-8a8c-37d03b7ab60c",
       "Flags": 0,
-      "Name": "Camera",
-      "Position": "-267.452,-379.653,297.7903",
-      "Rotation": "-0.1448582,0.2860239,0.4279631,0.8450171",
+      "Name": "MapLoader",
       "Enabled": true,
       "Components": [
         {
-          "__type": "Sandbox.CameraComponent",
-          "__guid": "cf3cbf96-22b6-4be4-a5d0-672a96c17f9f",
-          "BackgroundColor": "0.33333,0.46275,0.52157,1",
-          "ClearFlags": "All",
-          "FieldOfView": 60,
-          "IsMainCamera": true,
-          "Orthographic": false,
-          "OrthographicHeight": 1204,
-          "Priority": 1,
-          "RenderExcludeTags": "",
-          "RenderTags": "",
-          "TargetEye": "None",
-          "Viewport": "0,0,1,1",
-          "ZFar": 10000,
-          "ZNear": 10
-        },
-        {
-          "__type": "Sandbox.Bloom",
-          "__guid": "d73ef723-c888-41d4-802e-f797c79318be",
-          "BloomColor": {
-            "color": [
-              {
-                "c": "1,1,1,1"
-              },
-              {
-                "t": 1,
-                "c": "1,1,1,1"
-              }
-            ],
-            "alpha": []
-          },
-          "BloomCurve": [
-            {
-              "y": 0.5
-            },
-            {
-              "x": 1,
-              "y": 1
-            }
-          ],
-          "Mode": "Additive",
-          "Strength": 0.5,
-          "Threshold": 0.5,
-          "ThresholdWidth": 0.5
-        },
-        {
-          "__type": "Sandbox.Tonemapping",
-          "__guid": "9d76f362-7227-40eb-a189-69353c780c46",
+          "__type": "Sandbox.MapInstance",
+          "__guid": "840e80c0-1913-41a6-bdb3-5a15ea61d410",
           "__version": 1,
-          "ExposureBias": 2,
-          "ExposureCompensation": 0,
-          "ExposureMethod": "RGB",
-          "MaximumExposure": 2,
-          "MinimumExposure": 1,
-          "Mode": "Legacy",
-          "Rate": 1
-        },
-        {
-          "__type": "Sandbox.Sharpen",
-          "__guid": "0bffee5e-19f2-41c4-88f9-faefbcce6bf4",
-          "Scale": 0.2
+          "EnableCollision": true,
+          "MapName": "maps/playground.vmap",
+          "NoOrigin": false,
+          "UseMapFromLaunch": false
         }
-      ]
+      ],
+      "Children": []
     }
   ],
   "SceneProperties": {

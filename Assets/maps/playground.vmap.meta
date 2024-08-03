@@ -1,0 +1,22 @@
+{
+  "publish": {
+    "Enabled": false,
+    "ProjectConfig": {
+      "Title": "playground",
+      "Type": "map",
+      "Org": "local",
+      "Ident": "playground",
+      "Schema": 0,
+      "IncludeSourceFiles": false,
+      "Resources": null,
+      "PackageReferences": [],
+      "EditorReferences": [
+        "facepunch.concrete_barrier#33663",
+        "facepunch.wooden_crate#29138"
+      ],
+      "Metadata": {
+        "SingleAssetSource": "maps/playground.vmap"
+      }
+    }
+  }
+}
