@@ -6,8 +6,6 @@ public sealed class InspectableInteractable : Component, IInteractable {
 	}
 
 	public void OnInteract() {
-		Log.Info("Interacted with an inspectable object");
-		GameManager.Instance.State = PlayerState.inspecting;
 		GameManager.Instance.OnInspect(_model);
 	}
 }

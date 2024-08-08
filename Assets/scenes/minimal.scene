@@ -467,7 +467,13 @@
           "Components": [
             {
               "__type": "Inspection",
-              "__guid": "541c4602-e6a3-4e09-a3b7-bc077e5182fa"
+              "__guid": "541c4602-e6a3-4e09-a3b7-bc077e5182fa",
+              "InspectionModel": {
+                "_type": "component",
+                "component_id": "9439a34e-f1db-46d4-ad80-7a7761790827",
+                "go": "830f3ac6-8ca9-4db5-9e78-65fc583c74b9",
+                "component_type": "ModelRenderer"
+              }
             }
           ],
           "Children": [

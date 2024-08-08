@@ -1,11 +1,7 @@
 public sealed class Inspection : Component {
-	private ModelRenderer _inspectionModel;
-
-	protected override void OnAwake() {
-		_inspectionModel = Components.GetInChildren<ModelRenderer>(true);
-    }
+	[Property] private ModelRenderer InspectionModel { get; set; }
 
 	public void SetModel(Model model) {
-		_inspectionModel.Model = model;
+		InspectionModel.Model = model;
 	}
 }

@@ -10,7 +10,6 @@ public sealed class CameraMovement : Component {
 	}
 
 	protected override void OnUpdate() {
-		Log.Info(GameManager.Instance.State);
 		if (GameManager.Instance.State != PlayerState.walking) return;
 		AimCamera();
 	}
